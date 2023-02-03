@@ -116,22 +116,24 @@ body {
 
 #about {
   background: linear-gradient(28deg, #111111 40%, #00ff7f);
-  height: 100vh;
+  height: calc(100vh - 5rem);
   display: flex;
+  align-items: center;
 }
 
 .p-title {
   text-align: center;
   font-size: 2rem;
-  padding: 2rem 0;
+  padding-bottom: 6rem ;
 }
 
-.p-about__content {
+.p-box-content {
   display: flex;
   flex-wrap: wrap;
   gap: 2rem;
   align-items: center;
   justify-content: center;
+
 }
 
 .p-about__text {
@@ -142,11 +144,12 @@ body {
   background: linear-gradient(200deg, #111111 50%, #00ff7f);
   height: 100vh;
   display: flex;
+  align-items: center;
 }
 
 .p-skill {
-  display: grid;
-  grid-template-columns: auto auto auto;
+  display: flex;
+  flex-wrap: wrap;
   gap: 4rem;
   text-align: center;
   justify-content: center;
@@ -165,29 +168,21 @@ body {
   opacity: 0.5;
 }
 
-.p-skill div:hover{
+.p-skill div:hover {
   opacity: unset;
-
 }
-
 
 #project {
   background: linear-gradient(-22deg, #111111 40%, #00ff7f);
   height: 100vh;
   display: flex;
-}
-
-.p-project {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  gap: 4rem;
-  place-content: center;
+  align-items: center;
 }
 
 .p-project__box {
   background-color: rgba(194, 255, 194, 0.3);
-  height: 195px;
-  width: 310px;
+  height: 100px;
+  width: 200px;
   border-radius: 4rem;
   display: flex;
   align-items: center;
