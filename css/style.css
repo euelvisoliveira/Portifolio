@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+
+@import url(./reset.css);
+@import url(./global.css);
+@import url(./variables.css);
+
+body {
+  overflow-x: hidden;
+}
+
+.wrapper {
+  /* esse e responsavel por criar o padrao de espaco e alimento... na pagina */
+  width: min(79rem, 100%);
+  margin-inline: auto; /* alinhamento da margin automatico*/
+  padding-inline: 2.4rem;
+}
+
+.p-navbar {
+  padding: 1rem 0;
+  position: fixed;
+  background: rgba(196, 196, 196, 0.11);
+  backdrop-filter: blur(10px);
+  width: 100%;
+  text-align: center;
+  border-bottom: solid 1px var(--color--primary);
+}
+
+.p-navbar a {
+  text-decoration: none;
+  color: #f0e3ca;
+}
+
+.p-navbar a:hover {
+  text-decoration: none;
+  color: #caffcf;
+}
+
+.p-menu__item {
+  display: inline-flex;
+  gap: 1rem;
+}
+
+.p-menu__item li {
+  margin: 0 1.25rem;
+  text-decoration: unset;
+  list-style: none;
+}
+
+#home {
+  background: linear-gradient(150deg, #111111 40%, #00ff7f);
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+#home .wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  justify-content: center;
+  gap: 5rem;
+}
+
+#home .p-col__a {
+  text-align: left;
+  align-self: center;
+  padding-left: 6rem;
+}
+
+#home h1 {
+  font-size: 4rem;
+  color: #03fa6e;
+}
+
+@keyframes fa-pisca {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+#home h1::after {
+  content: '|';
+  margin-left: 4px;
+  opacity: 3;
+  animation: fa-pisca 0.7s infinite;
+}
+
+#home h4 {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#home p {
+  font-size: 1.4rem;
+  line-height: 1.4rem;
+}
+
+#home .p-content__cod {
+  display: flex;
+  padding-top: 3rem;
+  color: #03fa6e;
+  opacity: 0.2;
+}
+
+.p-home__img {
+  position: absolute;
+  top: 150px;
+  right: 300px;
+}
+
+#about {
+  background: linear-gradient(28deg, #111111 40%, #00ff7f);
+  height: 100vh;
+  display: flex;
+}
+
+.p-title {
+  text-align: center;
+  font-size: 2rem;
+  padding: 2rem 0;
+}
+
+.p-about__content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.p-about__text {
+  width: 900px;
+}
+
+#skill {
+  background: linear-gradient(200deg, #111111 50%, #00ff7f);
+  height: 100vh;
+  display: flex;
+}
+
+.p-skill {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4rem;
+  text-align: center;
+  justify-content: center;
+}
+
+.p-skill p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  line-height: 2rem;
+}
+
+.p-skill div {
+  background-color: #1c1c1c;
+  border-radius: 3rem;
+  padding: 2rem;
+  opacity: 0.5;
+}
+
+.p-skill div:hover{
+  opacity: unset;
+
+}
+
+
+#project {
+  background: linear-gradient(-22deg, #111111 40%, #00ff7f);
+  height: 100vh;
+  display: flex;
+}
+
+.p-project {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  gap: 4rem;
+  place-content: center;
+}
+
+.p-project__box {
+  background-color: rgba(194, 255, 194, 0.3);
+  height: 195px;
+  width: 310px;
+  border-radius: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: ease-in-out 0.5s;
+}
+
+.p-project__box p {
+  font-size: 1.5rem;
+}
+
+.p-project__box div {
+  background-color: #1c1c1c;
+  width: 2000px;
+  text-align: center;
+  padding: 0.5rem 0;
+}
+
+.p-project__box:hover {
+  letter-spacing: 0.3rem;
+}
