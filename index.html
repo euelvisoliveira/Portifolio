@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portifolio | Elvis Ribeiro</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <link rel="icon" type="image/x-icon" href="/assets/5.png" />
     <link rel="stylesheet" href=" /css/style.css" />
   </head>
@@ -32,7 +33,7 @@
       <div class="wrapper">
         <div class="p-col__a">
           <p>Oi, eu sou</p>
-          <h1 class="p-name">Elvis Ribeiro</h1>
+          <h1 class="p-name"></h1>
           <h4>Frontend Developer</h4>
         </div>
 
@@ -79,12 +80,10 @@ function addEffectWriting(element, time) {
       <section id="about">
         <div class="p-about wrapper">
           <h3 class="p-title">Sobre mim</h3>
-          <div class="p-box-content">
-            <div>
-              <img src="./assets/Elvis.png" width="250" height="450" />
-            </div>
-            <div>
-              <p class="p-about__text">
+          <div class="p-box-about">
+            <div class="p-circle"></div>
+            <div class="p-about__text">
+              <p>
                 A few years ago, I became interested in developing websites and
                 interfaces. Since then, I have been steadily improving my
                 skills. Now I am developing websites and web applications to
@@ -160,29 +159,41 @@ function addEffectWriting(element, time) {
         </div>
       </section>
     </main>
-    <footer>
-      <div class="wrapper">
-        <h4>Contatos</h4>
-        <ul>
-          <li>
-            <a href="https://www.linkedin.com/in/euelvisoliveira/">Linkedin</a>
-          </li>
-          <li>
-            <a href="https://github.com/euelvisoliveira">Github</a>
-          </li>
-          <li>
-            <a href="https://www.instagram.com/_e1viis_/">Instagram</a>
-          </li>
-          <li>
-            <a
-              href="https://api.whatsapp.com/send/?phone=5524992680912&text&type=phone_number&app_absent=0"
-              target="_blank"
-              >Whatsapp</a
-            >
-          </li>
-        </ul>
+
+    <footer id="footer">
+      <div class="p-footer wrapper">
+        <div class="p-footer_links">
+          <ul>
+            <li>
+              <a href="https://www.linkedin.com/in/euelvisoliveira/"
+                ><i id="linkedin" class="fa-brands fa-linkedin fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://github.com/euelvisoliveira"
+                ><i id="github" class="fa-brands fa-github fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a href="https://www.instagram.com/_e1viis_/"
+                ><i id="instagram" class="fa-brands fa-instagram fa-2x"></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="https://api.whatsapp.com/send/?phone=5524992680912&text&type=phone_number&app_absent=0"
+                target="_blank"
+                ><i id="whatsapp" class="fa-brands fa-whatsapp fa-2x"></i
+              ></a>
+            </li>
+          </ul>
+          <hr />
+
+          <p class="title-footer">Portifolio | Elvis Ribeiro</p>
+        </div>
       </div>
     </footer>
-    <script src="./main.js"></script>
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="/main.js"></script>
   </body>
 </html>

@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@300;400;700&display=swap');
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css');
 
 @import url(./reset.css);
 @import url(./global.css);
@@ -21,6 +22,7 @@ body {
   background: rgba(196, 196, 196, 0.11);
   backdrop-filter: blur(10px);
   width: 100%;
+  z-index: 1;
   text-align: center;
   border-bottom: solid 1px var(--color--primary);
 }
@@ -58,7 +60,6 @@ body {
   justify-content: space-between;
   align-items: center;
   justify-content: center;
-  gap: 5rem;
 }
 
 #home .p-col__a {
@@ -108,36 +109,42 @@ body {
   opacity: 0.2;
 }
 
-.p-home__img {
-  position: absolute;
-  top: 150px;
-  right: 300px;
-}
-
 #about {
   background: linear-gradient(28deg, #111111 40%, #00ff7f);
   height: calc(100vh - 5rem);
-  display: flex;
   align-items: center;
+}
+
+.p-circle {
+  width: 450px;
+  height: 300px;
+  border-radius: 50%;
+  box-shadow: 1px 10px 10px 2px rgba(255, 255, 255, 0.6);
+  background-image: url(/assets/Elvis.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: -2rem;
 }
 
 .p-title {
   text-align: center;
   font-size: 2rem;
-  padding-bottom: 6rem ;
+  padding-bottom: 6rem;
+}
+
+.p-box-about {
+  display: flex;
+  align-items: center;
+  gap: 5rem;
+  justify-content: center;
 }
 
 .p-box-content {
   display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
   align-items: center;
+  gap: 5rem;
+  flex-wrap: wrap;
   justify-content: center;
-
-}
-
-.p-about__text {
-  width: 900px;
 }
 
 #skill {
@@ -165,11 +172,6 @@ body {
   background-color: #1c1c1c;
   border-radius: 3rem;
   padding: 2rem;
-  opacity: 0.5;
-}
-
-.p-skill div:hover {
-  opacity: unset;
 }
 
 #project {
@@ -181,8 +183,8 @@ body {
 
 .p-project__box {
   background-color: rgba(194, 255, 194, 0.3);
-  height: 100px;
-  width: 200px;
+  height: 195px;
+  width: 310px;
   border-radius: 4rem;
   display: flex;
   align-items: center;
@@ -205,4 +207,37 @@ body {
 
 .p-project__box:hover {
   letter-spacing: 0.3rem;
+}
+
+#footer {
+  background: #1c1c1c;
+  backdrop-filter: blur(10px);
+}
+
+.p-footer_links ul {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.p-footer_links li {
+  list-style: none;
+  padding: 3rem 0;
+}
+
+i {
+  color: #fff;
+  --fa-beat-fade-opacity: 0.67;
+  --fa-beat-fade-scale: 1.075;
+}
+
+.title-footer {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding: 2rem 0;
+}
+
+hr {
+  border-color: var(--color--primary);
 }
