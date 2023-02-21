@@ -1,199 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portifolio | Elvis Ribeiro</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <link rel="icon" type="image/x-icon" href="/assets/5.png" />
-    <link rel="stylesheet" href=" /css/style.css" />
-  </head>
-  <body>
-    <nav id="navigation" class="p-navbar">
-      <div class="p-menu wrapper">
-        <ul class="p-menu__item">
-          <li>
-            <a href="#">Sobre</a>
-          </li>
-          <li>
-            <a href="#">Skills</a>
-          </li>
-          <li>
-            <a href="#">Projetos</a>
-          </li>
-          <li>
-            <a href="#">Contatos</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Portifolio | Elvis Ribeiro</title>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+		<link rel="icon" type="image/x-icon" href="/assets/5.png" />
+		<link rel="stylesheet" href=" /css/style.css" />
+	</head>
+	<body>
+		<nav id="navigation" class="p-navbar">
+			<div class="p-menu wrapper">
+				<ul class="p-menu__item">
+					<li>
+						<a href="#">Sobre</a>
+					</li>
+					<li>
+						<a href="#">Skills</a>
+					</li>
+					<li>
+						<a href="#">Projetos</a>
+					</li>
+					<li>
+						<a href="#">Contatos</a>
+					</li>
+				</ul>
+			</div>
+		</nav>
 
-    <header id="home">
-      <div class="wrapper">
-        <div class="p-col__a">
-          <p>Oi, eu sou</p>
-          <h1 class="p-name"></h1>
-          <h4>Frontend Developer</h4>
-        </div>
+		<header id="home">
+			<div class="wrapper">
+				<div class="p-col__a">
+					<p>Oi, eu sou</p>
+					<h1 class="p-name"></h1>
+					<h4>Frontend Developer</h4>
+				</div>
 
-        <div class="p-col__b">
-          <pre class="p-content__cod">
-let button_menu = document.querySelector(".header_button");
-let float_menu  = document.querySelector(".header_menu--float");
+				<div class="p-col__b">
+					<pre>
+              let button_menu = document.querySelector(".header_button");
+              let float_menu  = document.querySelector(".header_menu--float");
 
-let line_top   = document.querySelector(".header_button_line--top");
-let line_under = document.querySelector(".header_button_line--bottom");
+              let line_top   = document.querySelector(".header_button_line--top");
+              let line_under = document.querySelector(".header_button_line--bottom");
 
-button_menu.isSelected = false;
+              button_menu.isSelected = false;
 
-function addEffectWriting(element, time) {
-  let element_array = element.innerText.split("");
+              function addEffectWriting(element, time) {
+                let element_array = element.innerText.split("");
 
-  element.count     = 0;
-  element.innerText = "";
+                element.count     = 0;
+                element.innerText = "";
 
-  function writeSymbols() {
-    element.innerText += element_array[element.count];
-    element.count++;
+                function writeSymbols() {
+                  element.innerText += element_array[element.count];
+                  element.count++;
 
-    if (element.count <= element_array.length) {
-      setTimeout(() => {
-        writeSymbols();
-      }, time);
-    } else if (element.count >= element_array.length) {
-      element.count     = 0;
-      element.innerText = "";
+                  if (element.count <= element_array.length) {
+                    setTimeout(() => {
+                      writeSymbols();
+                    }, time);
+                  } else if (element.count >= element_array.length) {
+                    element.count     = 0;
+                    element.innerText = "";
 
-      writeSymbols();
-    }
-  }
-  writeSymbols();
-}
+                    writeSymbols();
+                  }
+                }
+                writeSymbols();
+              }
 
           </pre>
-        </div>
-      </div>
-    </header>
+				</div>
+			</div>
+		</header>
 
-    <main>
-      <section id="about">
-        <div class="p-about wrapper">
-          <h3 class="p-title">Sobre mim</h3>
-          <div class="p-box-about">
-            <div class="p-circle"></div>
-            <div class="p-about__text">
-              <p>
-                A few years ago, I became interested in developing websites and
-                interfaces. Since then, I have been steadily improving my
-                skills. Now I am developing websites and web applications to
-                order or for myself.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+		<main>
+			<section id="about">
+				<div class="p-about wrapper">
+					<h3 class="p-title">Sobre mim</h3>
+					<div class="p-box-about">
+						<div class="p-circle"></div>
+						<div class="p-about__text">
+							<p>
+								A few years ago, I became interested in developing websites and
+								interfaces. Since then, I have been steadily improving my
+								skills. Now I am developing websites and web applications to
+								order or for myself.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section id="skill">
-        <div class="wrapper">
-          <div>
-            <h3 class="p-title">Minhas Skills</h3>
-          </div>
-          <div class="p-skill">
-            <div>
-              <img src="/assets/icon html.png" alt="" />
-              <p>HTML</p>
-            </div>
-            <div>
-              <img src="/assets/icon css.png" alt="" />
-              <p>CSS</p>
-            </div>
-            <div>
-              <img src="/assets/icon js.png" alt="" />
-              <p>JavaScript</p>
-            </div>
-            <div>
-              <img src="/assets/icon git.png" alt="" />
-              <p>Git</p>
-            </div>
-            <div>
-              <img src="/assets/icon scss.png" alt="" />
-              <p>Scss</p>
-            </div>
-            <div>
-              <img
-                src="/assets/React-icon.png"
-                alt=""
-                width="130"
-                height="130"
-              />
-              <p class="name_codigo">React</p>
-            </div>
-          </div>
-        </div>
-      </section>
+			<section id="skill">
+				<div class="wrapper">
+					<div>
+						<h3 class="p-title">Minhas Skills</h3>
+					</div>
+					<div class="p-skill">
+						<div>
+							<img src="/assets/icon html.png" alt="" />
+							<p>HTML</p>
+						</div>
+						<div>
+							<img src="/assets/icon css.png" alt="" />
+							<p>CSS</p>
+						</div>
+						<div>
+							<img src="/assets/icon js.png" alt="" />
+							<p>JavaScript</p>
+						</div>
+						<div>
+							<img src="/assets/icon git.png" alt="" />
+							<p>Git</p>
+						</div>
+						<div>
+							<img src="/assets/icon scss.png" alt="" />
+							<p>Scss</p>
+						</div>
+						<div>
+							<img
+								src="/assets/React-icon.png"
+								alt=""
+								width="130"
+								height="130"
+							/>
+							<p class="name_codigo">React</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
-      <section id="project">
-        <div class="wrapper">
-          <h4 class="p-title">Meus Projetos</h4>
-          <div class="p-box-content">
-            <div class="p-project__box">
-              <div><p>EM BREVE</p></div>
-            </div>
-            <div class="p-project__box">
-              <div><p>EM BREVE</p></div>
-            </div>
-            <div class="p-project__box">
-              <div><p>EM BREVE</p></div>
-            </div>
-            <div class="p-project__box">
-              <div><p>EM BREVE</p></div>
-            </div>
-            <div class="p-project__box">
-              <div><p>EM BREVE</p></div>
-            </div>
-            <div class="p-project__box">
-              <div><p>EM BREVE</p></div>
-            </div>
-          </div>
-        </div>
-      </section>
-    </main>
+			<section id="project">
+				<div class="wrapper">
+					<h4 class="p-title">Meus Projetos</h4>
+					<div class="p-box-content">
+						<div class="p-project__box">
+							<div><p>EM BREVE</p></div>
+						</div>
+						<div class="p-project__box">
+							<div><p>EM BREVE</p></div>
+						</div>
+						<div class="p-project__box">
+							<div><p>EM BREVE</p></div>
+						</div>
+						<div class="p-project__box">
+							<div><p>EM BREVE</p></div>
+						</div>
+						<div class="p-project__box">
+							<div><p>EM BREVE</p></div>
+						</div>
+						<div class="p-project__box">
+							<div><p>EM BREVE</p></div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
 
-    <footer id="footer">
-      <div class="p-footer wrapper">
-        <div class="p-footer_links">
-          <ul>
-            <li>
-              <a href="https://www.linkedin.com/in/euelvisoliveira/"
-                ><i id="linkedin" class="fa-brands fa-linkedin fa-2x"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://github.com/euelvisoliveira"
-                ><i id="github" class="fa-brands fa-github fa-2x"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://www.instagram.com/_e1viis_/"
-                ><i id="instagram" class="fa-brands fa-instagram fa-2x"></i
-              ></a>
-            </li>
-            <li>
-              <a
-                href="https://api.whatsapp.com/send/?phone=5524992680912&text&type=phone_number&app_absent=0"
-                target="_blank"
-                ><i id="whatsapp" class="fa-brands fa-whatsapp fa-2x"></i
-              ></a>
-            </li>
-          </ul>
-          <hr />
+		<footer id="footer">
+			<div class="p-footer wrapper">
+				<div class="p-footer_links">
+					<ul>
+						<li>
+							<a href="https://www.linkedin.com/in/euelvisoliveira/"
+								><i id="linkedin" class="fa-brands fa-linkedin fa-2x"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://github.com/euelvisoliveira"
+								><i id="github" class="fa-brands fa-github fa-2x"></i
+							></a>
+						</li>
+						<li>
+							<a href="https://www.instagram.com/_e1viis_/"
+								><i id="instagram" class="fa-brands fa-instagram fa-2x"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="https://api.whatsapp.com/send/?phone=5524992680912&text&type=phone_number&app_absent=0"
+								target="_blank"
+								><i id="whatsapp" class="fa-brands fa-whatsapp fa-2x"></i
+							></a>
+						</li>
+						<li>
+							<a
+								href="mailto:elvis.ribeiro.deoliveira@hotmail.com"
+								target="_blank"
+								><i id="email" class="fa-regular fa-envelope fa-2x"></i
+							></a>
+						</li>
+					</ul>
+					<hr />
 
-          <p class="title-footer">Portifolio | Elvis Ribeiro</p>
-        </div>
-      </div>
-    </footer>
-    <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="/main.js"></script>
-  </body>
+					<p class="title-footer">Portifolio | Elvis Ribeiro</p>
+				</div>
+			</div>
+		</footer>
+		<script src="https://unpkg.com/scrollreveal"></script>
+		<script src="/main.js"></script>
+	</body>
 </html>
