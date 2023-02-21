@@ -110,7 +110,7 @@ body {
 
 #about {
 	background: linear-gradient(28deg, #111111 40%, #00ff7f);
-	height: calc(100vh - 5rem);
+	height: 100vh;
 	display: flex;
 	align-items: center;
 }
