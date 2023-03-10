@@ -48,6 +48,34 @@ body {
 	list-style: none;
 }
 
+.p-menu i {
+	display: none;
+}
+
+@media screen and (max-width: 600px) {
+	.p-menu__item {
+		display: none;
+	}
+
+	.p-menu i {
+		display: flex;
+		cursor: pointer;
+		color: #00ff7f;
+		padding-bottom: 3rem;
+	}
+
+	.active .p-menu__item {
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+		gap: 3rem;
+	}
+
+	#closeMenu {
+		display: none;
+	}
+}
+
 #home {
 	background: linear-gradient(150deg, #111111 40%, #00ff7f);
 	height: 100vh;
