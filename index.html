@@ -12,11 +12,13 @@
 	<body>
 		<nav id="navigation" class="p-navbar">
 			<div class="p-menu wrapper">
-				<i id="openMenu" class="fa-solid fa-bars fa-2x"></i>
-				<i id="closeMenu" class="fa-solid fa-xmark fa-2x"></i>
+				<button id="btn-mobile">
+					Menu
+					<span></span>
+				</button>
 				<ul class="p-menu__item">
 					<li>
-						<a href="#home">Inicio</a>
+						<a onclick="closeMenu()" href="#home">Inicio</a>
 					</li>
 					<li>
 						<a href="#about">Sobre</a>
@@ -41,37 +43,37 @@
 
 				<div class="p-col__b">
 					<pre>
-              let button_menu = document.querySelector(".header_button");
-              let float_menu  = document.querySelector(".header_menu--float");
+let button_menu = document.querySelector(".header_button");
+let float_menu  = document.querySelector(".header_menu--float");
 
-              let line_top   = document.querySelector(".header_button_line--top");
-              let line_under = document.querySelector(".header_button_line--bottom");
+let line_top   = document.querySelector(".header_button_line--top");
+let line_under = document.querySelector(".header_button_line--bottom");
 
-              button_menu.isSelected = false;
+button_menu.isSelected = false;
 
-              function addEffectWriting(element, time) {
-                let element_array = element.innerText.split("");
+function addEffectWriting(element, time) {
+  let element_array = element.innerText.split("");
 
-                element.count     = 0;
-                element.innerText = "";
+  element.count     = 0;
+  element.innerText = "";
 
-                function writeSymbols() {
-                  element.innerText += element_array[element.count];
-                  element.count++;
+  function writeSymbols() {
+    element.innerText += element_array[element.count];
+    element.count++;
 
-                  if (element.count <= element_array.length) {
-                    setTimeout(() => {
-                      writeSymbols();
-                    }, time);
-                  } else if (element.count >= element_array.length) {
-                    element.count     = 0;
-                    element.innerText = "";
+    if (element.count <= element_array.length) {
+      setTimeout(() => {
+        writeSymbols();
+      }, time);
+    } else if (element.count >= element_array.length) {
+      element.count     = 0;
+      element.innerText = "";
 
-                    writeSymbols();
-                  }
-                }
-                writeSymbols();
-              }
+      writeSymbols();
+    }
+  }
+  writeSymbols();
+}
 
           </pre>
 				</div>

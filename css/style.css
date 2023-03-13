@@ -48,31 +48,38 @@ body {
 	list-style: none;
 }
 
-.p-menu i {
+#btn-mobile {
 	display: none;
 }
 
 @media screen and (max-width: 600px) {
-	.p-menu__item {
-		display: none;
+	.p-menu {
+		width: 100vw;
 	}
 
-	.p-menu i {
-		display: flex;
-		cursor: pointer;
-		color: #00ff7f;
-		padding-bottom: 3rem;
+	.p-menu__item {
+		display: none;
+		margin: 2rem 0;
+	}
+
+	.p-menu__item li {
+		margin: 0;
 	}
 
 	.active .p-menu__item {
 		display: flex;
 		flex-direction: column;
-		align-items: start;
-		gap: 3rem;
+		align-items: flex-start;
+		gap: 2rem;
+		z-index: 1;
 	}
 
-	#closeMenu {
-		display: none;
+	#btn-mobile {
+		display: flex;
+		font-size: 1.4rem;
+		background: none;
+		border: none;
+		color: #f0e3ca;
 	}
 }
 
@@ -85,15 +92,15 @@ body {
 #home .wrapper {
 	display: grid;
 	align-items: center;
-	grid-template-columns: 1fr auto;
+	grid-template-columns: 500px auto;
 	justify-content: center;
 }
 
-.p-col__a {
+/* .p-col__a {
 	text-align: left;
 	align-self: center;
 	padding-left: 6rem;
-}
+} */
 
 #home h1 {
 	font-size: 4rem;
@@ -136,6 +143,34 @@ body {
 	opacity: 0.2;
 }
 
+@media screen and (max-width: 1080px) {
+	#home .p-col__b {
+		display: flex;
+		justify-content: center;
+		font-size: 11px;
+		line-height: 1.1rem;
+	}
+
+	#home .p-col__a {
+		width: 350px;
+		display: grid;
+		justify-self: center;
+		position: absolute;
+	}
+
+	#home p {
+		font-size: 1.1rem;
+	}
+
+	#home h1 {
+		font-size: 3.2rem;
+	}
+
+	#home h4 {
+		font-size: 1.5rem;
+	}
+}
+
 #about {
 	background: linear-gradient(28deg, #111111 40%, #00ff7f);
 	height: 100vh;
@@ -144,14 +179,14 @@ body {
 }
 
 .p-circle {
-	width: 450px;
+	width: 300px;
 	height: 300px;
 	border-radius: 50%;
 	box-shadow: 1px 10px 10px 2px rgba(255, 255, 255, 0.6);
 	background-image: url(../assets/Elvis.png);
 	background-size: cover;
 	background-repeat: no-repeat;
-	background-position-y: -2rem;
+	background-position-y: -1.5rem;
 }
 
 .p-title {
@@ -161,10 +196,10 @@ body {
 }
 
 .p-box-about {
-	display: flex;
-	align-items: center;
+	display: grid;
+	grid-template-columns: auto auto;
 	gap: 5rem;
-	justify-content: center;
+	align-items: center;
 }
 
 .p-box-content {
@@ -173,6 +208,23 @@ body {
 	gap: 5rem;
 	flex-wrap: wrap;
 	justify-content: center;
+}
+
+@media screen and (max-width: 1080px) {
+	.p-box-about {
+		display: grid;
+		grid-template-columns: auto;
+		justify-items: center;
+	}
+
+	.p-circle {
+		width: 200px;
+		height: 200px;
+	}
+
+	.p-about__text {
+		text-align: center;
+	}
 }
 
 #skill {
@@ -205,6 +257,28 @@ body {
 
 .p-skill div:hover {
 	opacity: unset;
+}
+
+@media screen and (max-width: 600px) {
+	.p-skill {
+		flex-direction: column;
+		align-items: center;
+		gap: 16px;
+	}
+
+	.p-skill img {
+		width: 28.3px;
+		height: 32px;
+	}
+
+	.p-skill div {
+		display: flex;
+		align-items: center;
+		width: 285px;
+		height: 60px;
+		padding: 0px 32px;
+		gap: 0.5rem;
+	}
 }
 
 #project {
@@ -240,6 +314,25 @@ body {
 
 .p-project__box:hover {
 	letter-spacing: 0.3rem;
+}
+
+@media screen and (max-width: 1080px) {
+	#project {
+		height: 100%;
+	}
+
+	#project .p-title {
+		padding: 0;
+		padding: 10rem 0;
+	}
+
+	.p-project__box {
+		margin-bottom: 3rem;
+	}
+
+	.p-box-content {
+		gap: 1.5rem;
+	}
 }
 
 #footer {

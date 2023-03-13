@@ -74,10 +74,11 @@ sr.reveal(`.p-box-content`, {
 	origin: 'bottom'
 });
 
-$('#openMenu').click(function () {
-	$('#navigation').addClass('active');
-});
+const btnMobile = document.getElementById('btn-mobile');
 
-$('#closeMenu').click(function () {
-	$('#navigation').removeClass('active');
-});
+function toggleMenu() {
+	const nav = document.getElementById('navigation');
+	nav.classList.toggle('active');
+}
+
+btnMobile.addEventListener('click', toggleMenu);
